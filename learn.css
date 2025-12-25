@@ -1,0 +1,275 @@
+* {
+  color: rgb(17, 17, 17);
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  scroll-margin-top: 120px;
+  margin: 10px auto;
+  padding-top: 50px;
+}
+#imga {
+  border-radius: 50%;
+  border: 1px solid rgb(87, 92, 23);
+  transition: transform 1s;
+}
+.para{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 80%;
+  margin: 10px;
+
+}
+.para p{
+  padding: 10px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.im{
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 30px;
+}
+.about-content {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#imga:hover {
+  transform: scale(1.1, 1.1);
+}
+header nav {
+  height: 40px;
+  background: linear-gradient(135deg, #6d8196, #764ba2);
+  padding: 5px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: 20px;
+}
+nav a:hover {
+  background: linear-gradient(135deg, rgb(247, 247, 175), rgb(245, 245, 132));
+  transition: 0.8s;
+}
+header {
+  text-align: center;
+}
+#home h1 {
+  margin: 0;
+  color: white;
+  background: linear-gradient(135deg, #6d8196, #754e9c);
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeLeftRight 2s ease-out forwards;
+  text-align: center;
+}
+section h2 {
+  text-align: center;
+  background: linear-gradient(135deg, #6d8196, #764ba2);
+  margin: 0;
+  padding: 0;
+}
+#home{
+  margin: 0;
+  padding-top: 50px;
+}
+#home p{
+  padding: 10px 0 0 30px;
+}
+#skills ul {
+  max-width: 1200px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  list-style: none;
+}
+
+#skills li {
+  margin: 10px;
+  background: #667eea;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#skills li:hover {
+  background: linear-gradient(130deg, #b382b3, #7f4bb3);
+  transform: scale(1.05);
+}
+
+#contact ul li,
+#contact h3 {
+  padding: 0 20px 20px 20px;
+}
+#contact a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+#about p {
+  padding: 0 20px 20px 20px;
+  text-transform: capitalize;
+  text-align: justify;
+  min-height: 3.5cm;
+}
+.high,
+.senior,
+.college {
+  border: 1px solid grey;
+  list-style: none;
+  padding: 2px 20px 2px 20px;
+  border-radius: 20px;
+  margin: 2px 20px 20px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.high:hover,
+.senior:hover,
+.college:hover {
+  transform: scale(1.01, 1.01);
+  background: linear-gradient(130deg, rgb(241, 239, 239), rgb(197, 196, 196));
+}
+footer p {
+  background-color: rgba(39, 19, 58, 0.5);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.cont {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 50px 20px 20px;
+  background-color: rgb(241, 250, 249);
+}
+#but {
+  height: 25px;
+  line-height: 0.5cm;
+  text-align: center;
+  width: 3.5cm;
+  border-radius: 10px;
+}
+#but:hover {
+  background: linear-gradient(135deg, #6d8196, #7f5ca1);
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+}
+#mess{
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#contact form {
+  padding: 0 20px 20px 20px;
+}
+#name, #email, #sub, #num{
+  height: 25px;
+  padding-left: 5px;
+  border-radius: 10px;
+
+}
+section h2 {
+  height: 1.5cm;
+  padding-top: 0.5cm;
+}
+
+
+
+
+
+
+@keyframes fadeLeftRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .im{
+    order: -1;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  .para{
+    width: 90%;
+    margin-top: 2px;
+  }
+  #mess{
+    width: 60%;
+  }
+  .high,
+  .senior,
+  .college {
+    max-width: 700px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  #imga {
+    display: block;
+  }
+  body {
+    color: rgb(17, 17, 17);
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  header a {
+    margin: 5px;
+    border-radius: 5px;
+  }
+  section h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
