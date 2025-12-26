@@ -3,27 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio | Vanshika Joshi</title>
+
     <link rel="stylesheet" href="learn.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
+
   <body>
-    <script>
-      //alert("Welcome to my portfolio");
-      //confirm("click Ok to confirm");
-      //prompt("Want to use free!, plese give your email");
-      /*function myFun()
-      {
-        document.bgColor="lightgrey";
-      }*/
-      function caps() {
-        var x = document.getElementById("name");
-        x.value = x.value
-          .toLowerCase()
-          .split(" ")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ");
-      }
-    </script>
     <header>
       <nav>
         <a href="#home">Home</a>
@@ -34,164 +24,195 @@
       </nav>
     </header>
     <main>
-      <div class="homie">
-        <section id="home">
-          <h1>PORTFOLIO</h1>
-          <p>Hi! welcome to my portfolio</p>
-        </section>
-        <div class="ab">
-          <section id="about">
-            <h2>About-Me</h2>
-            <div class="about-content">
-              <div class="para">
+      <section id="home">
+        <div class="home-content">
+          <span class="home-tag">PORTFOLIO</span>
+
+          <h1>Hi, I’m <span class="typing"></span></h1>
+
+          <p>
+            WELCOME TO MY PORTFOLIO
+          </p>
+          <a href="#about" class="home-btn">About Me</a>
+
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-content">
+          <div class="para">
+            <p>
+              I am Vanshika Joshi, a second-year B.Tech Computer Science and
+              Engineering student at Birla Institute of Applied Sciences.
+              <br /><br />
+              I am passionate about learning web development and focus on
+              creating clean, structured HTML with clear and effective content
+              organization.
+              <br /><br />
+              This portfolio represents my learning journey, skills development,
+              and growing interest in technology.
+            </p>
+          </div>
+
+          <div class="im">
+            <img
+              src="img1.jpeg"
+              alt="Profile Image"
+              id="imga"
+              width="150"
+              height="150"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+
+        <ul>
+          <li>
+            <div class="high">
+              <div class="content">
+                <h3>Greenwoods Global School</h3>
+                <p>Completed 10th in 2022.</p>
+              </div>
+              <a href="https://greenwoodsglobalschool.com/" target="_blank">
+                <img
+                  src="ggs.png"
+                  alt="Greenwoods Global School"
+                  height="150"
+                />
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="senior">
+              <div class="content">
+                <h3>Siddharth Senior Sr. School</h3>
+                <p>Completed 12th in 2024.</p>
+              </div>
+              <a href="http://www.siddharthpublicschools.in/" target="_blank">
+                <img src="sps.png" alt="Siddharth School" height="150" />
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="college">
+              <div class="content">
+                <h3>Birla Institute of Applied Sciences</h3>
                 <p>
-                  I am Vanshika Joshi, a second-year B.Tech Computer Science and
-                  Engineering student at Birla Institute of Applied Sciences. I
-                  am passionate about learning web development and focus on
-                  creating clean, structured HTML with clear and effective
-                  content organization.
+                  Pursuing B.Tech in Computer Science and Engineering
                   <br />
-                  I enjoy problem-solving and building simple, functional web
-                  pages that follow good design and coding practices. This
-                  portfolio represents my learning journey, skills development,
-                  and growing interest in technology.
+                  Completion Year: 2028
                 </p>
               </div>
-              <div class="im">
-                <img src="img1.jpeg" height="150px" width="150px" id="imga" />
-              </div>
+              <a href="https://www.birlainstitute.co.in/" target="_blank">
+                <img src="coll.png" alt="Birla Institute" height="150" />
+              </a>
             </div>
-          </section>
-        </div>
-        <section id="education">
-          <h2>Education</h2>
-          <div>
-            <ul>
-              <li>
-                <div class="high">
-                  <div class="content">
-                    <h3>Greenwoods Global School</h3>
-                    <p>Completed 10th in 2022.</p>
-                  </div>
-                  <a href="https://greenwoodsglobalschool.com/">
-                    <img
-                      src="ggs.png"
-                      alt="greenwoodsglobalschool"
-                      height="150px"
-                    />
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="senior">
-                  <div class="content">
-                    <h3>Siddharth Senior Sr. School</h3>
-                    <p>Completed 12th in 2024.</p>
-                  </div>
+          </li>
+        </ul>
+      </section>
 
-                  <a href="http://www.siddharthpublicschools.in/">
-                    <img
-                      src="sps.png"
-                      alt="siddharthpublicschools"
-                      height="150px"
-                    />
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="college">
-                  <div class="content">
-                    <h3>Birla Institute Of Applied Sciences</h3>
-                    <p>
-                      Pursuing B-Tech in Computer Science and Engineering.
-                      <br />
-                      Completion year - 2028
-                    </p>
-                  </div>
-                  <a href="https://www.birlainstitute.co.in/">
-                    <img src="coll.png" akt="birlainstitute" height="150px" />
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section id="skills">
-          <h2>Skills and Tech</h2>
-          <ul>
-            <li>Html</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Oops</li>
-            <li>Python</li>
-            <li>C</li>
-            <li>C++</li>
-            <li>DSA</li>
-          </ul>
-        </section>
-        <section id="contact">
-          <h2>Contact-Info</h2>
-          <ul>
-            <li> Address: Haldwani, Uttarakhand</li>
-            <li>Email: vanshikajoshi072@gmail.com</li>
-            <li>
-              Linkedin:
-              <a href="https://www.linkedin.com/in/vanshika-joshi-238912382"
-                >https://www.linkedin.com/in/vanshika-joshi-238912382"</a
-              >
-            </li>
-          </ul>
-          <div class="cont">
-            <h3>Contact-me</h3>
-            <form
-              action="mailto:vanshikajoshi@gmail.com"
-              method="post"
-              enctype="text/plain"
+      <section id="skills">
+        <h2>Skills & Tech</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>OOPs</li>
+          <li>Python</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>DSA</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Info</h2>
+
+        <ul class="contact-list">
+          <li>
+            <i class="fas fa-location-dot"></i>
+            <strong>Address:</strong>
+            Haldwani, Uttarakhand, India
+          </li>
+
+          <li>
+            <i class="fas fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:vanshikajoshi072@gmail.com">
+              vanshikajoshi072@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/vanshika-joshi-238912382"
+              target="_blank"
             >
-              <p>
-                Name:
-                <input
-                  type="text"
-                  id="name"
-                  onblur="caps()"
-                  name="Name"
-                  required
-                />
-              </p>
+              linkedin.com/in/vanshika-joshi
+            </a>
+          </li>
+        </ul>
 
-              <p>
-                Email:
-                <input type="email" name="Email" id="email" required />
-              </p>
+        <div class="cont">
+          <h3>Contact Me</h3>
 
-              <p>
-                Subject:
-                <input type="text" name="Subject" id="sub" />
-              </p>
+          <form id="ContactForm" onblur="caps()">
+            <p>
+              Name:
+              <input type="text" id="name" name="Name" required />
+            </p>
 
-              <p>
-                Mobile-Number:
-                <input type="number" name="Mobile" id="num" />
-              </p>
+            <p>
+              Email:
+              <input type="email" id="email" name="Email" required />
+            </p>
 
-              <p>Message:</p>
-              <p>
-                <textarea
-                  name="Message"
-                  rows="5"
-                  cols="50"
-                  id="mess"
-                  placeholder="Message"
-                ></textarea>
-              </p>
-              <button type="submit" id="but">Send Message</button>
-            </form>
-          </div>
-        </section>
-      </div>
+            <p>
+              Subject:
+              <input type="text" id="sub" name="Subject" />
+            </p>
+
+            <p>
+              Mobile Number:
+              <input type="number" id="num" name="Mobile" />
+              <span id="mobileError">
+                Please enter a valid 10-digit mobile number
+              </span>
+            </p>
+
+            <p>Message:</p>
+            <textarea
+              id="mess"
+              name="Message"
+              rows="5"
+              cols="50"
+              placeholder="Message"
+            ></textarea>
+
+            <br /><br />
+            <button type="submit" id="but">Send Message</button>
+          </form>
+
+          <p id="thankYouMsg" style="display: none">
+            Thanks for visiting! Your message has been sent 😊
+          </p>
+        </div>
+      </section>
     </main>
+
     <footer>
-      <p>&copy;Vanshika Joshi Terms and Conditions</p>
+      <p>&copy; Vanshika Joshi | All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

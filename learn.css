@@ -1,8 +1,11 @@
+
 * {
   color: rgb(17, 17, 17);
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,33 +14,56 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* ===================================================
+   Section Styles
+=================================================== */
 section {
-  scroll-margin-top: 120px;
   margin: 10px auto;
   padding-top: 50px;
 }
+section h2 {
+  text-align: center;
+  background: linear-gradient(135deg, #6d8196, #764ba2);
+  margin: 0;
+  padding: 0;
+  height: 1.5cm;
+  padding-top: 0.5cm;
+}
+
+
+/* ===================================================
+   About Section Styles
+=================================================== */
 #imga {
   border-radius: 50%;
   border: 1px solid rgb(87, 92, 23);
   transition: transform 1s;
 }
-.para{
+
+#imga:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.para {
   box-sizing: border-box;
   display: inline-block;
   width: 80%;
   margin: 10px;
-
 }
-.para p{
+
+.para p {
   padding: 10px;
   line-height: 30px;
   text-transform: capitalize;
 }
-.im{
+
+.im {
   box-sizing: border-box;
   padding: 10px;
   margin-right: 30px;
 }
+
 .about-content {
   text-transform: capitalize;
   display: flex;
@@ -46,9 +72,9 @@ section {
   gap: 20px;
 }
 
-#imga:hover {
-  transform: scale(1.1, 1.1);
-}
+/* ===================================================
+   Header & Navigation
+=================================================== */
 header nav {
   height: 40px;
   background: linear-gradient(135deg, #6d8196, #764ba2);
@@ -58,6 +84,7 @@ header nav {
   display: flex;
   justify-content: space-evenly;
   top: 0;
+  will-change: transform;
 }
 
 nav a {
@@ -66,35 +93,140 @@ nav a {
   padding: 5px;
   height: 20px;
 }
+
 nav a:hover {
   background: linear-gradient(135deg, rgb(247, 247, 175), rgb(245, 245, 132));
   transition: 0.8s;
 }
+
+nav a.active {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
 header {
   text-align: center;
 }
+
+/* ===================================================
+   Home Section
+=================================================== */
+
+#home {
+  min-height: 60vh;
+  padding: 90px 20px 60px;
+  text-align: center;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Welcome text */
+/* ===============================
+   HOME SECTION – MODERN HERO
+   =============================== */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: #ffffff;
+  padding: 40px 20px;
+}
+
+.home-content {
+  max-width: 800px;
+}
+
+/* Small tag */
+.home-tag {
+  display: inline-block;
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Main Heading */
 #home h1 {
-  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 12px 0;
+  color: #222;
+}
+
+/* Name highlight */
+#home h1 span {
+  background: linear-gradient(135deg, #6d8196, #754e9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtitle */
+#home p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+/* Fade animation */
+.home-content {
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+/* ===============================
+   HOME – ABOUT ME BUTTON
+================================ */
+
+.home-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 38px;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
   color: white;
   background: linear-gradient(135deg, #6d8196, #754e9c);
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeLeftRight 2s ease-out forwards;
-  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-section h2 {
-  text-align: center;
-  background: linear-gradient(135deg, #6d8196, #764ba2);
-  margin: 0;
-  padding: 0;
+
+.home-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-#home{
-  margin: 0;
-  padding-top: 50px;
+
+.home-btn:active {
+  transform: scale(0.96);
 }
-#home p{
-  padding: 10px 0 0 30px;
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+
+
+
+
+
+/*Skills Section*/
 #skills ul {
   max-width: 1200px;
   margin-left: 30px;
@@ -120,10 +252,40 @@ section h2 {
   transform: scale(1.05);
 }
 
+/*Contact Section*/
 #contact ul li,
 #contact h3 {
   padding: 0 20px 20px 20px;
 }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.contact-list i {
+  color: #667eea;
+  font-size: 18px;
+  min-width: 20px;
+}
+
+.contact-list a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
 #contact a {
   color: #667eea;
   text-decoration: none;
@@ -132,12 +294,59 @@ section h2 {
 #contact a:hover {
   text-decoration: underline;
 }
+
+.cont {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 50px 20px 20px;
+  background-color: rgb(241, 250, 249);
+}
+
+#but {
+  height: 25px;
+  line-height: 0.5cm;
+  text-align: center;
+  width: 3.5cm;
+  border-radius: 10px;
+}
+
+#but:hover {
+  background: linear-gradient(135deg, #6d8196, #7f5ca1);
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+}
+#but:active {
+  transform: scale(0.95);
+  background-color: #5a6c8c;
+}
+
+#mess {
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#contact form {
+  padding: 0 20px 20px 20px;
+}
+
+#name,
+#email,
+#sub,
+#num {
+  height: 25px;
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+/*About Paragraph*/
 #about p {
   padding: 0 20px 20px 20px;
   text-transform: capitalize;
   text-align: justify;
   min-height: 3.5cm;
 }
+
+/*Education Cards*/
 .high,
 .senior,
 .college {
@@ -158,53 +367,63 @@ section h2 {
   transform: scale(1.01, 1.01);
   background: linear-gradient(130deg, rgb(241, 239, 239), rgb(197, 196, 196));
 }
+
+/*----footer------*/
 footer p {
   background-color: rgba(39, 19, 58, 0.5);
   text-align: center;
   padding: 0;
   margin: 0;
 }
-.cont {
-  border: 1px solid black;
+
+/*Thank You Message */
+#thankYouMsg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 40px;
   border-radius: 10px;
-  margin: 10px 50px 20px 20px;
-  background-color: rgb(241, 250, 249);
-}
-#but {
-  height: 25px;
-  line-height: 0.5cm;
-  text-align: center;
-  width: 3.5cm;
-  border-radius: 10px;
-}
-#but:hover {
-  background: linear-gradient(135deg, #6d8196, #7f5ca1);
-  transform: scale(1.1, 1.1);
-  transition: 0.5s;
-}
-#mess{
-  border-radius: 10px;
-  padding-left: 10px;
+  font-size: 18px;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
-#contact form {
-  padding: 0 20px 20px 20px;
+#thankYouMsg.show {
+  opacity: 1;
+  pointer-events: auto;
 }
-#name, #email, #sub, #num{
-  height: 25px;
-  padding-left: 5px;
-  border-radius: 10px;
 
-}
-section h2 {
-  height: 1.5cm;
-  padding-top: 0.5cm;
+#thankYouMsg.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 
+#mobileError {
+  display: none;
+  color: #ff4d4f;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 5px;
+}
 
 
-
+/* ---Animations--- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes fadeLeftRight {
   from {
@@ -217,36 +436,31 @@ section h2 {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* ===================================================
+   Media Queries
+=================================================== */
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
   }
-  .im{
+
+  .im {
     order: -1;
     height: 180px;
     margin-top: 10px;
     margin-left: 30px;
   }
-  .para{
+
+  .para {
     width: 90%;
     margin-top: 2px;
   }
-  #mess{
+
+  #mess {
     width: 60%;
   }
+
   .high,
   .senior,
   .college {
@@ -255,21 +469,36 @@ section h2 {
     flex-direction: column;
     text-align: center;
   }
+
   #imga {
     display: block;
   }
+
   body {
     color: rgb(17, 17, 17);
     padding: 0;
     margin: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
+
   header a {
     margin: 5px;
     border-radius: 5px;
   }
+
   section h2 {
     text-align: center;
     width: 100%;
   }
+  .home-tag {
+    font-size: 2rem;
+  }
+  #home h1 {
+    font-size: 2.8rem;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+  }
 }
+
