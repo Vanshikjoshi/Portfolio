@@ -4,51 +4,47 @@ const mobileInput = document.getElementById("num");
 const mobileError = document.getElementById("mobileError");
 
 form.addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent actual form submission
+  e.preventDefault(); 
 
   const mobileValue = mobileInput.value.trim();
 
-  // Validate mobile number
   if (mobileValue.length !== 10 || !/^\d{10}$/.test(mobileValue)) {
-    mobileError.style.display = "inline"; // show error
-    return; // stop here if invalid
+    mobileError.style.display = "inline"; 
+    return; 
   } else {
-    mobileError.style.display = "none"; // hide error if valid
+    mobileError.style.display = "none"; 
   }
 
-  form.reset(); // reset form fields
-
-  // Show thank you message
+  form.reset(); 
   thankYouMsg.style.display = "block";
   thankYouMsg.style.opacity = 1;
 
-  // Hide the message and scroll to home after 1.2 seconds
+  
   setTimeout(() => {
-    thankYouMsg.style.opacity = 0; // fade out
+    thankYouMsg.style.opacity = 0;
 
     setTimeout(() => {
       thankYouMsg.style.display = "none";
       document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-    }, 500); // fade out duration
-  }, 1200); // message display duration
+    }, 500); 
+  }, 1200); 
 });
-// Show thank-you message
+
 thankYouMsg.classList.add("show");
 thankYouMsg.classList.remove("hide");
 
-// Hide after 1.2 seconds
+
 setTimeout(() => {
   thankYouMsg.classList.remove("show");
   thankYouMsg.classList.add("hide");
 
-  // Scroll to home after fade
+  
   setTimeout(() => {
     form.reset();
     document.getElementById("home").scrollIntoView({ behavior: "smooth" });
   }, 500);
 }, 1200);
 
-// Optional: hide error as user types
 mobileInput.addEventListener("input", () => {
   const val = mobileInput.value.trim();
   if (/^\d{0,10}$/.test(val)) {
@@ -56,7 +52,7 @@ mobileInput.addEventListener("input", () => {
     mobileInput.classList.remove("invalid");
   }
 });
-// Typing effect
+
 const text = "Vanshika Joshi";
 const typingSpan = document.querySelector(".typing");
 

@@ -15,9 +15,7 @@ body {
   padding: 0;
 }
 
-/* ===================================================
-   Section Styles
-=================================================== */
+/* Section Styles */
 section {
   margin: 10px auto;
   padding-top: 50px;
@@ -32,9 +30,7 @@ section h2 {
 }
 
 
-/* ===================================================
-   About Section Styles
-=================================================== */
+/*About Section  */
 #imga {
   border-radius: 50%;
   border: 1px solid rgb(87, 92, 23);
@@ -72,9 +68,7 @@ section h2 {
   gap: 20px;
 }
 
-/* ===================================================
-   Header & Navigation
-=================================================== */
+/*Header & Navigation */
 header nav {
   height: 40px;
   background: linear-gradient(135deg, #6d8196, #764ba2);
@@ -107,9 +101,7 @@ header {
   text-align: center;
 }
 
-/* ===================================================
-   Home Section
-=================================================== */
+/*Home Section*/
 
 #home {
   min-height: 60vh;
@@ -123,10 +115,8 @@ header {
   align-items: center;
 }
 
-/* Welcome text */
-/* ===============================
-   HOME SECTION – MODERN HERO
-   =============================== */
+
+/*HOME SECTION – MODERN HERO */
 
 #home {
   min-height: 100vh;
@@ -182,9 +172,6 @@ header {
   animation: fadeUp 1.2s ease forwards;
   opacity: 0;
 }
-/* ===============================
-   HOME – ABOUT ME BUTTON
-================================ */
 
 .home-btn {
   display: inline-block;
@@ -436,9 +423,7 @@ footer p {
   }
 }
 
-/* ===================================================
-   Media Queries
-=================================================== */
+/*Media Queries */
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
